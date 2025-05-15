@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VT Store | Camisetas e Acessórios Cristãos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 2rem;
+    }
+    .products {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product-card h3 {
+      margin: 1rem 0 0.5rem;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .buy-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VT Store</h1>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Moda Cristã com Propósito 💖</h2>
+  </section>
+
+  <section class="products" id="produtos">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1602810318383-967b5b29f70a" alt="Camiseta Jesus é Rei">
+      <h3>Camiseta "Jesus é Rei"</h3>
+      <p>100% algodão, estampa durável, confortável.</p>
+      <p><strong>R$ 49,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1600180758890-3b5f3b2983c1" alt="Pulseira Fé">
+      <h3>Pulseira "Fé"</h3>
+      <p>Feita à mão, ajustável, couro sintético.</p>
+      <p><strong>R$ 29,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1598032891485-74b4b2d5b6c3" alt="Cruz de madeira">
+      <h3>Colar Cruz de Madeira</h3>
+      <p>Design simples, fé em cada detalhe.</p>
+      <p><strong>R$ 19,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <p><i class="fas fa-envelope"></i> contato@vtstore.com</p>
+    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+    <p>&copy; 2025 VT Store - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function copiarPix(chave) {
+      navigator.clipboard.writeText(chave);
+      alert("Chave Pix copiada: " + chave);
+    }
+  </script>
+</body>
+</html>
