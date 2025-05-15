@@ -14,16 +14,19 @@
       font-family: 'Poppins', sans-serif;
     }
     body {
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: #111;
+      background-color: #222;
       color: #fff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       font-size: 1.8rem;
@@ -33,6 +36,10 @@
       margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #4CAF50;
     }
     .hero {
       background: url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2') center/cover no-repeat;
@@ -47,7 +54,12 @@
       background-color: rgba(0, 0, 0, 0.6);
       padding: 1rem 2rem;
       border-radius: 10px;
+      font-size: 2.5rem;
+    }
+    .section-title {
+      text-align: center;
       font-size: 2rem;
+      margin: 2rem 0 1rem;
     }
     .products {
       padding: 2rem;
@@ -59,8 +71,12 @@
       background: white;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
       text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.03);
     }
     .product-card img {
       width: 100%;
@@ -83,13 +99,20 @@
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    .buy-btn:hover {
+      background-color: #3e8e41;
     }
     footer {
       background: #111;
       color: #fff;
-      padding: 1.5rem;
+      padding: 2rem 1rem;
       text-align: center;
-      margin-top: 2rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
     }
   </style>
 </head>
@@ -103,36 +126,58 @@
   </header>
 
   <section class="hero">
-    <h2>Moda Cristã com Propósito 💖</h2>
+    <h2>Vista Sua Fé com Estilo 🙏</h2>
   </section>
 
+  <h2 class="section-title">Nossos Produtos</h2>
   <section class="products" id="produtos">
     <div class="product-card">
       <img src="https://images.unsplash.com/photo-1602810318383-967b5b29f70a" alt="Camiseta Jesus é Rei">
       <h3>Camiseta "Jesus é Rei"</h3>
-      <p>100% algodão, estampa durável, confortável.</p>
+      <p>100% algodão, confortável e com estampa durável.</p>
       <p><strong>R$ 49,90</strong></p>
-      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
     </div>
     <div class="product-card">
       <img src="https://images.unsplash.com/photo-1600180758890-3b5f3b2983c1" alt="Pulseira Fé">
       <h3>Pulseira "Fé"</h3>
-      <p>Feita à mão, ajustável, couro sintético.</p>
+      <p>Feita à mão, ajustável e resistente.</p>
       <p><strong>R$ 29,90</strong></p>
-      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
     </div>
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1598032891485-74b4b2d5b6c3" alt="Cruz de madeira">
+      <img src="https://images.unsplash.com/photo-1598032891485-74b4b2d5b6c3" alt="Colar Cruz de Madeira">
       <h3>Colar Cruz de Madeira</h3>
-      <p>Design simples, fé em cada detalhe.</p>
+      <p>Design simples e elegante com mensagem de fé.</p>
       <p><strong>R$ 19,90</strong></p>
-      <button class="buy-btn" onclick="copiarPix('chavepix@exemplo.com')">Comprar via Pix</button>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354691263-b1cf837c4e19" alt="Camiseta O Senhor é Meu Pastor">
+      <h3>Camiseta "O Senhor é Meu Pastor"</h3>
+      <p>Modelo estiloso, tecido leve e cristão autêntico.</p>
+      <p><strong>R$ 54,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1593032465174-8b94e1e7e3a2" alt="Boné Jesus Salva">
+      <h3>Boné "Jesus Salva"</h3>
+      <p>Estilo urbano com bordado de fé e proteção solar.</p>
+      <p><strong>R$ 39,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1533077169123-9c40887e2a56" alt="Chaveiro Cruz">
+      <h3>Chaveiro Cruz</h3>
+      <p>Leve a presença de Deus com você todos os dias.</p>
+      <p><strong>R$ 9,90</strong></p>
+      <button class="buy-btn" onclick="copiarPix('vtstore@pix.com')">Comprar via Pix</button>
     </div>
   </section>
 
   <footer id="contato">
     <p><i class="fas fa-envelope"></i> contato@vtstore.com</p>
-    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+    <p><i class="fas fa-phone"></i> +55 54 98131-2500</p>
     <p>&copy; 2025 VT Store - Todos os direitos reservados</p>
   </footer>
 
